@@ -5541,3 +5541,14 @@ Original Stack Trace:
 2025-05-30 17:10:08 [reactor-http-nio-3] INFO  c.a.w.s.AviationWeatherKafkaProducerService - PIREP 데이터 카프카 전송 시작: 1000 건
 2025-05-30 17:10:08 [reactor-http-nio-3] INFO  c.a.w.s.AviationWeatherKafkaProducerService - PIREP 데이터 카프카 전송 완료 - 성공: 1000, 실패: 0
 2025-05-30 17:10:08 [reactor-http-nio-3] INFO  c.a.w.s.AviationWeatherSchedulerService - PIREP 데이터 처리 완료 - 수집: 1000건, 소요시간: 343ms
+2025-05-30 17:10:13 [scheduling-1] INFO  c.a.w.s.AviationWeatherSchedulerService - 초기 SIGMET 데이터 수집 시작
+2025-05-30 17:10:13 [scheduling-1] INFO  c.a.w.s.AviationWeatherSchedulerService - === SIGMET 데이터 정기 수집 시작 (2회차) ===
+2025-05-30 17:10:13 [scheduling-1] INFO  c.a.w.service.AviationWeatherService - SIGMET 데이터 수집 시작
+2025-05-30 17:10:13 [scheduling-1] DEBUG o.s.w.r.f.client.ExchangeFunctions - [4fe3291e] HTTP GET https://aviationweather.gov/api/data/airsigmet?format=json&date=current
+2025-05-30 17:10:13 [scheduling-1] INFO  c.a.w.s.AviationWeatherSchedulerService - 초기 데이터 수집 완료
+2025-05-30 17:10:13 [reactor-http-nio-2] DEBUG o.s.w.r.f.client.ExchangeFunctions - [4fe3291e] [4de81e6f-3] Response 200 OK
+2025-05-30 17:10:13 [reactor-http-nio-2] INFO  c.a.w.service.AviationWeatherService - SIGMET 데이터 수집 완료: 6 건
+2025-05-30 17:10:13 [reactor-http-nio-2] INFO  c.a.w.s.AviationWeatherKafkaProducerService - SIGMET 데이터 카프카 전송 시작: 6 건
+2025-05-30 17:10:13 [reactor-http-nio-2] INFO  c.a.w.s.AviationWeatherKafkaProducerService - SIGMET 데이터 카프카 전송 완료 - 성공: 6, 실패: 0
+2025-05-30 17:10:13 [reactor-http-nio-2] INFO  c.a.w.s.AviationWeatherSchedulerService - SIGMET 데이터 처리 완료 - 수집: 6건, 소요시간: 10ms
+2025-05-30 17:14:45 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
